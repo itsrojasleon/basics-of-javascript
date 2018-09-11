@@ -7,4 +7,6 @@ switch(zodiacSign) {
   case 'piscis':
     console.log('piscis');
     break;
+  default:
+    console.log('Are you crazy?')
 }
