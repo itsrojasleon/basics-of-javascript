@@ -43,4 +43,13 @@ for (let i = 0; i < people.length; i++) {
 
 // Filtering
 const small = people.filter(p => p.altura < 1.8);
-console.log(small);
+// console.log(small);
+
+// Transform arrays
+const transform = people => ({
+  ...people,
+  altura: people.altura * 100
+});
+
+const withCms = people.map(transform)
+console.log(withCms)
