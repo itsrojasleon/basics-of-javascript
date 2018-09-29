@@ -39,3 +39,8 @@ let people = [sacha, alan, martin, dario, vicky, paula];
 for (let i = 0; i < people.length; i++) {
   console.log(`${people[i].nombre} mide ${people[i].altura}`)
 }
+
+
+// Filtering
+const small = people.filter(p => p.altura < 1.8);
+console.log(small);
