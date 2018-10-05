@@ -52,4 +52,9 @@ const transform = people => ({
 });
 
 const withCms = people.map(transform)
-console.log(withCms)
+// console.log(withCms)
+
+const totalBooks = people.reduce((acum, people) => {
+  return acum + people.altura
+}, 0);
+console.log("Total Books: ", totalBooks)
