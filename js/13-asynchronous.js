@@ -2,8 +2,11 @@ console.log('a');
 // setTimeout(function() {
 //   console.log('b');
 // }, 0)
-function hello() {
-  console.log('b')
+setTimeout(() => {
+  console.log('print')
+}, 2000);
+
+for (let i = 0; i <= 10000000; i++) {
+  console.log('d');
 }
-hello();
-console.log('c');
+// DON'T DO IT
