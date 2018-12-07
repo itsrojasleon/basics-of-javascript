@@ -89,6 +89,7 @@
         constructor() {
           this.start();
           this.generateSequence();
+          this.nextLevel();
         }
         start() {
           startButton.classList.add('hide')
@@ -102,6 +103,32 @@
         }
         generateSequence() {
           this.sequence = new Array(10).fill(0).map(n => Math.floor(Math.random() * 4));
+        }
+        nextLevel() {
+          this.light();
+        }
+        transformNumberToColor(number) {
+          switch (number) {
+            case 0: return 'blue';
+            case 1: return 'violet';
+            case 1: return 'orange';
+            case 1: return 'green';
+          }
+        }
+        light() {
+          for (const i = 0; i < this.level; i++) {
+            let color = this.transformNumberToColor(this.sequence[i]);
+            this.lightColor(color);
+          }
+        }
+        lightColor(color) {
+          this.colors[color].classList.add('light');
+          setTimeout(()  => {
+            this.turnOff(color);
+          }, 1000 * i)
+        }
+        turnOff(color) {
+          this.colors[color].classList.remove('light')
         }
       }
       function startGame() {
